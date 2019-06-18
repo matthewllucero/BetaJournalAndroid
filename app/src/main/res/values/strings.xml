@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BetaJournal</string>
+    <string name="entries">Entries</string>
+    <string name="stats">Stats</string>
+    <string name="settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
