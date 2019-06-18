@@ -11,4 +11,13 @@
         android:layout_height="match_parent"
         android:text="@string/entries" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/test"
+        android:src="@drawable/add"/>
+
 </FrameLayout>

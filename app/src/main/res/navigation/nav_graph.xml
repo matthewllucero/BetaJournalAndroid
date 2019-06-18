@@ -9,10 +9,19 @@
         android:id="@+id/entriesFragment"
         android:name="com.example.betajournal.EntriesFragment"
         android:label="fragment_entries"
-        tools:layout="@layout/fragment_entries" />
+        tools:layout="@layout/fragment_entries" >
+        <action
+            android:id="@+id/add_entry_action"
+            app:destination="@id/addEntryFragment" />
+    </fragment>
     <fragment
         android:id="@+id/statsFragment"
-        android:name="com.example.betajournal.statsFragment"
+        android:name="com.example.betajournal.StatsFragment"
         android:label="fragment_stats"
         tools:layout="@layout/fragment_stats" />
+    <fragment
+        android:id="@+id/addEntryFragment"
+        android:name="com.example.betajournal.AddEntryFragment"
+        android:label="fragment_add_entry"
+        tools:layout="@layout/fragment_add_entry" />
 </navigation>
