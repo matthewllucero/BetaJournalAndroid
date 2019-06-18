@@ -36,7 +36,8 @@
             android:layout_marginBottom="20dp">
 
             <Button
-                android:text="@string/set_date"/>
+                android:text="@string/set_date"
+                android:id="@+id/set_date_btn"/>
 
             <TextView
                 android:id="@+id/date_text_view"
