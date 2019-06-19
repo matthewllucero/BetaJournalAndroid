@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/v0"/>
+
+    <item
+        android:title="@string/v1"/>
+
+    <item
+        android:title="@string/v2"/>
+
+    <item
+        android:title="@string/v3"/>
+
+    <item
+        android:title="@string/v4"/>
+
+    <item
+        android:title="@string/v5"/>
+
+    <item
+        android:title="@string/v6"/>
+
+    <item
+        android:title="@string/v7"/>
+
+    <item
+        android:title="@string/v8"/>
+
+    <item
+        android:title="@string/v9"/>
+
+    <item
+        android:title="@string/v10"/>
+
+    <item
+        android:title="@string/v11"/>
+
+    <item
+        android:title="@string/v12"/>
+
+    <item
+        android:title="@string/v13"/>
+
+    <item
+        android:title="@string/v14"/>
+
+    <item
+        android:title="@string/v15"/>
+
+    <item
+        android:title="@string/v16"/>
+
+</menu>

@@ -11,6 +11,23 @@
     <string name="add">Add</string>
     <string name="save_entry">Save Entry</string>
     <string name="location">Location:</string>
+    <string name="v0">V0</string>
+    <string name="v1">V1</string>
+    <string name="v2">V2</string>
+    <string name="v3">V3</string>
+    <string name="v4">V4</string>
+    <string name="v5">V5</string>
+    <string name="v6">V6</string>
+    <string name="v7">V7</string>
+    <string name="v8">V8</string>
+    <string name="v9">V9</string>
+    <string name="v10">V10</string>
+    <string name="v11">V11</string>
+    <string name="v12">V12</string>
+    <string name="v13">V13</string>
+    <string name="v14">V14</string>
+    <string name="v15">V15</string>
+    <string name="v16">V16</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

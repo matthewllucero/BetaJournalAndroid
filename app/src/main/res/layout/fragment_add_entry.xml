@@ -62,14 +62,15 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/add"/>
-
+                    android:text="@string/add"
+                    android:id="@+id/add_onsight_btn" />
             </LinearLayout>
 
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/onsight_grid_layout">
+                android:id="@+id/onsight_grid_layout"
+                android:layout_weight="1">
 
             </GridLayout>
 
@@ -92,14 +93,16 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/add"/>
+                    android:text="@string/add"
+                    android:id="@+id/add_flash_btn" />
 
             </LinearLayout>
 
             <GridLayout
                 android:id="@+id/flash_grid_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
             </GridLayout>
 
@@ -122,14 +125,16 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/add"/>
+                    android:text="@string/add"
+                    android:id="@+id/add_redpoint_btn"/>
 
             </LinearLayout>
 
             <GridLayout
                 android:id="@+id/redpoint_grid_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
             </GridLayout>
 
@@ -152,14 +157,16 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/add"/>
+                    android:text="@string/add"
+                    android:id="@+id/no_send_btn"/>
 
             </LinearLayout>
 
             <GridLayout
                 android:id="@+id/no_send_grid_layout"
                 android:layout_height="match_parent"
-                android:layout_width="match_parent">
+                android:layout_width="match_parent"
+                android:layout_weight="1">
 
             </GridLayout>
 
@@ -172,7 +179,8 @@
             <Button
                 android:text="@string/save_entry"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/save_entry_btn"/>
 
         </TableRow>
 
