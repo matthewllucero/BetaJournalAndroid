@@ -13,6 +13,7 @@
         android:layout_marginBottom="60dp">
 
         <TableRow
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp">
@@ -36,7 +37,8 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="@string/location"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/location_edit_text"
@@ -65,7 +67,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/onsight" />
+                    android:text="@string/onsight"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:id="@+id/add_onsight_btn"
@@ -80,7 +83,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:columnCount="10"
-                android:useDefaultMargins="true">
+                android:useDefaultMargins="true"
+                android:background="@drawable/border">
 
 
             </GridLayout>
@@ -100,7 +104,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/flash" />
+                    android:text="@string/flash"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:layout_width="wrap_content"
@@ -116,7 +121,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:useDefaultMargins="true"
-                android:columnCount="10">
+                android:columnCount="10"
+                android:background="@drawable/border">
 
             </GridLayout>
 
@@ -135,7 +141,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/redpoint" />
+                    android:text="@string/redpoint"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:layout_width="wrap_content"
@@ -151,7 +158,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:useDefaultMargins="true"
-                android:columnCount="10">
+                android:columnCount="10"
+                android:background="@drawable/border">
 
             </GridLayout>
 
@@ -170,7 +178,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_send" />
+                    android:text="@string/no_send"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:layout_width="wrap_content"
@@ -187,7 +196,7 @@
                 android:layout_weight="1"
                 android:useDefaultMargins="true"
                 android:columnCount="10"
-                android:rowCount="3">
+                android:background="@drawable/border">
 
             </GridLayout>
 
