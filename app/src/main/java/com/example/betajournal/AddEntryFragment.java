@@ -8,6 +8,7 @@ import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -287,6 +288,8 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
             MainActivity.myAppDatabase.myDao().addSavedEntry(savedEntries);
             Toast.makeText(getContext(), "Saved Entry", Toast.LENGTH_SHORT).show();
 
+            //Once the data is properly saved, the user will be taken back to the EntriesFragment
+            Navigation.findNavController(mView).navigate(R.id.entriesFragment);
 
         }
     }
