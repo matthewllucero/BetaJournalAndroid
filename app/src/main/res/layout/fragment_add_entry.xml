@@ -17,6 +17,21 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp">
 
+            <Button
+                android:text="@string/set_date"
+                android:id="@+id/set_date_btn"/>
+
+            <TextView
+                android:id="@+id/date_text_view"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp">
+
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -27,24 +42,14 @@
                 android:id="@+id/location_edit_text"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:lines="1"/>
 
         </TableRow>
 
-        <TableRow
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp">
 
-            <Button
-                android:text="@string/set_date"
-                android:id="@+id/set_date_btn"/>
-
-            <TextView
-                android:id="@+id/date_text_view"
-                android:layout_marginStart="10dp"/>
-
-        </TableRow>
 
         <TableRow
             android:layout_height="96dp"
@@ -72,7 +77,7 @@
             <GridLayout
                 android:id="@+id/onsight_grid_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:columnCount="10"
                 android:useDefaultMargins="true">
@@ -108,7 +113,7 @@
             <GridLayout
                 android:id="@+id/flash_grid_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:useDefaultMargins="true"
                 android:columnCount="10">
@@ -143,7 +148,7 @@
             <GridLayout
                 android:id="@+id/redpoint_grid_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:useDefaultMargins="true"
                 android:columnCount="10">
@@ -177,7 +182,7 @@
 
             <GridLayout
                 android:id="@+id/no_send_grid_layout"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:useDefaultMargins="true"

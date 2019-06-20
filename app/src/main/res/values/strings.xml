@@ -28,6 +28,7 @@
     <string name="v14">V14</string>
     <string name="v15">V15</string>
     <string name="v16">V16</string>
+    <string name="date">Date:</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
