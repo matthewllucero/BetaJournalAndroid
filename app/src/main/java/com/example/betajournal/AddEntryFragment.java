@@ -22,7 +22,11 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Vector;
 
 
 /**
@@ -47,6 +51,7 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
     private String flash;
     private String redpoint;
     private String noSend;
+    private Map<String, Integer> mapOfGrades;
 
     public AddEntryFragment() {
         // Required empty public constructor
@@ -56,6 +61,27 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        mapOfGrades = new HashMap<>();
+
+        mapOfGrades.put("V0", 0);
+        mapOfGrades.put("V1", 0);
+        mapOfGrades.put("V2", 0);
+        mapOfGrades.put("V3", 0);
+        mapOfGrades.put("V4", 0);
+        mapOfGrades.put("V5", 0);
+        mapOfGrades.put("V6", 0);
+        mapOfGrades.put("V7", 0);
+        mapOfGrades.put("V8", 0);
+        mapOfGrades.put("V9", 0);
+        mapOfGrades.put("V10", 0);
+        mapOfGrades.put("V11", 0);
+        mapOfGrades.put("V12", 0);
+        mapOfGrades.put("V13", 0);
+        mapOfGrades.put("V14", 0);
+        mapOfGrades.put("V15", 0);
+        mapOfGrades.put("V16", 0);
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add_entry, container, false);
 
@@ -64,6 +90,8 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
 
         date = "";
         location = "";
@@ -206,6 +234,8 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
         tv.setText(mCurrentGrade);
         mGridLayout.addView(tv);
 
+        addGradeToMap(mCurrentGrade);
+
         switch (currentButton) {
             case R.id.add_onsight_btn:
                 onsight = onsight + mCurrentGrade + ", ";
@@ -284,13 +314,55 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
             savedEntries.setRedpoint(redpointSTR);
             savedEntries.setNoSend(noSendSTR);
 
+
+            /*****************************/
+
+
+            savedEntries.setV0Count(savedEntries.getV0Count() + mapOfGrades.get("V0"));
+            savedEntries.setV1Count(savedEntries.getV1Count() + mapOfGrades.get("V1"));
+            savedEntries.setV2Count(savedEntries.getV2Count() + mapOfGrades.get("V2"));
+            savedEntries.setV3Count(savedEntries.getV3Count() + mapOfGrades.get("V3"));
+            savedEntries.setV4Count(savedEntries.getV4Count() + mapOfGrades.get("V4"));
+            savedEntries.setV5Count(savedEntries.getV5Count() + mapOfGrades.get("V5"));
+            savedEntries.setV6Count(savedEntries.getV6Count() + mapOfGrades.get("V6"));
+            savedEntries.setV7Count(savedEntries.getV7Count() + mapOfGrades.get("V7"));
+            savedEntries.setV8Count(savedEntries.getV8Count() + mapOfGrades.get("V8"));
+            savedEntries.setV9Count(savedEntries.getV9Count() + mapOfGrades.get("V9"));
+            savedEntries.setV10Count(savedEntries.getV10Count() + mapOfGrades.get("V10"));
+            savedEntries.setV11Count(savedEntries.getV11Count() + mapOfGrades.get("V11"));
+            savedEntries.setV12Count(savedEntries.getV12Count() + mapOfGrades.get("V12"));
+            savedEntries.setV13count(savedEntries.getV13count() + mapOfGrades.get("V13"));
+            savedEntries.setV14Count(savedEntries.getV14Count() + mapOfGrades.get("V14"));
+            savedEntries.setV15Count(savedEntries.getV15Count() + mapOfGrades.get("V15"));
+            savedEntries.setV16Count(savedEntries.getV16Count() + mapOfGrades.get("V16"));
+
+            /*****************************/
+
+
+
+
             //Adding that object to the Room database
             MainActivity.myAppDatabase.myDao().addSavedEntry(savedEntries);
             Toast.makeText(getContext(), "Saved Entry", Toast.LENGTH_SHORT).show();
+
 
             //Once the data is properly saved, the user will be taken back to the EntriesFragment
             Navigation.findNavController(mView).navigate(R.id.entriesFragment);
 
         }
     }
+
+    public void addGradeToMap(String mCurrentGrade) {
+        Integer oldValue = mapOfGrades.get(mCurrentGrade);
+        int newValue;
+        if (oldValue == null) {
+            newValue = 1;
+        } else {
+            newValue = oldValue + 1;
+        }
+        mapOfGrades.replace(mCurrentGrade, newValue);
+
+    }
+
+
 }

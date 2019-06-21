@@ -1,14 +1,296 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StatsFragment">
+    tools:context=".StatsFragment"
+    android:orientation="vertical"
+    android:gravity="bottom|center"
+    android:layout_margin="5dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/stats" />
+    
 
-</FrameLayout>
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:rowCount="3"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:text="@string/count"/>
+
+            <TextView
+                android:text="@string/graph"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:text="@string/grade"/>
+
+            <!-- V0 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v0_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v0_bar"/>
+            <TextView
+                android:text="@string/v0"
+                android:layout_gravity="center"/>
+
+            <!-- V1 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v1_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v1_bar"/>
+            <TextView
+                android:text="@string/v1"
+                android:layout_gravity="center"/>
+
+            <!-- V2 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v2_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v2_bar"/>
+            <TextView
+                android:text="@string/v2"
+                android:layout_gravity="center"/>
+
+            <!-- V3 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v3_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v3_bar"/>
+            <TextView
+                android:text="@string/v3"
+                android:layout_gravity="center"/>
+
+            <!-- V4 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v4_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v4_bar"/>
+            <TextView
+                android:text="@string/v4"
+                android:layout_gravity="center"/>
+
+            <!-- V5 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v5_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v5_bar"/>
+            <TextView
+                android:text="@string/v5"
+                android:layout_gravity="center"/>
+
+            <!-- V6 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v6_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v6_bar"/>
+            <TextView
+                android:text="@string/v6"
+                android:layout_gravity="center"/>
+
+            <!-- V7 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v7_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v7_bar"/>
+            <TextView
+                android:text="@string/v7"
+                android:layout_gravity="center"/>
+
+            <!-- V8 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v8_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v8_bar"/>
+            <TextView
+                android:text="@string/v8"
+                android:layout_gravity="center"/>
+
+            <!-- V9 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v9_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v9_bar"/>
+            <TextView
+                android:text="@string/v9"
+                android:layout_gravity="center"/>
+
+            <!-- V10 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v10_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v10_bar"/>
+            <TextView
+                android:text="@string/v10"
+                android:layout_gravity="center"/>
+
+            <!-- V11 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v11_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v11_bar"/>
+            <TextView
+                android:text="@string/v11"
+                android:layout_gravity="center"/>
+
+            <!-- V12 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v12_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v12_bar"/>
+            <TextView
+                android:text="@string/v12"
+                android:layout_gravity="center"/>
+
+            <!-- V13 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v13_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v13_bar"/>
+            <TextView
+                android:text="@string/v13"
+                android:layout_gravity="center"/>
+
+            <!-- V14 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v14_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v14_bar"/>
+            <TextView
+                android:text="@string/v14"
+                android:layout_gravity="center"/>
+
+            <!-- V15 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v15_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v15_bar"/>
+            <TextView
+                android:text="@string/v15"
+                android:layout_gravity="center"/>
+
+            <!-- V16 -->
+            <TextView
+                android:text="@string/zero"
+                android:layout_gravity="center"
+                android:id="@+id/v16_count"/>
+            <TextView
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="8dp"
+                android:id="@+id/v16_bar"/>
+            <TextView
+                android:text="@string/v16"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"/>
+
+        </GridLayout>
+
+    </HorizontalScrollView>
+
+
+</LinearLayout>

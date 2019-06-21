@@ -30,6 +30,7 @@ public class EntriesFragment extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     ArrayList<ExampleSavedEntry> exampleSavedEntries;
 
+
     public EntriesFragment() {
         // Required empty public constructor
     }
@@ -46,6 +47,7 @@ public class EntriesFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
 
         mView = view;
 
