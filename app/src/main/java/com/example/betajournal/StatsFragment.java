@@ -53,6 +53,8 @@ public class StatsFragment extends Fragment {
         updateCount();
         updateBar();
         setBarColor();
+        getMostClimbed();
+        getHighestGrade();
 
     }
 
@@ -120,9 +122,6 @@ public class StatsFragment extends Fragment {
             v16 += savedEntry.getV16Count();
 
         }
-        TextView v0Count = mView.findViewById(R.id.v0_count);
-        v0Count.setText(String.valueOf(v0));
-
     }
 
     private void updateCount() {
@@ -190,5 +189,110 @@ public class StatsFragment extends Fragment {
     private int getRandomColor(){
         Random rnd = new Random();
         return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+    }
+
+    private void getMostClimbed() {
+        int[] grades = {v0, v1, v2, v3, v4, v5, v6, v7, v8, v9,
+                        v10, v11, v12, v13, v14, v15, v16};
+
+        int max = v0;
+        int maxGradeIndex = 0;
+        for (int i = 1; i < grades.length; i++) {
+            if (grades[i] > max) {
+                max = grades[i];
+                maxGradeIndex = i;
+            }
+        }
+
+        String grade = returnMostClimbedGrade(maxGradeIndex);
+        TextView mostClimbed = mView.findViewById(R.id.most_climbed);
+        String newText = "Most Climbed: " + grade;
+        mostClimbed.setText(newText);
+
+    }
+
+    private String returnMostClimbedGrade(int index) {
+
+        String grade;
+
+        switch (index) {
+
+            case 0:
+                grade = "V0";
+                break;
+            case 1:
+                grade = "V1";
+                break;
+            case 2:
+                grade = "V2";
+                break;
+            case 3:
+                grade = "V3";
+                break;
+            case 4:
+                grade = "V4";
+                break;
+            case 5:
+                grade = "V5";
+                break;
+            case 6:
+                grade = "V6";
+                break;
+            case 7:
+                grade = "V7";
+                break;
+            case 8:
+                grade = "V8";
+                break;
+            case 9:
+                grade = "V9";
+                break;
+            case 10:
+                grade = "V10";
+                break;
+            case 11:
+                grade = "V11";
+                break;
+            case 12:
+                grade = "V12";
+                break;
+            case 13:
+                grade = "V13";
+                break;
+            case 14:
+                grade = "V14";
+                break;
+            case 15:
+                grade = "V15";
+                break;
+            case 16:
+                grade = "V16";
+                break;
+            default:
+                grade = " ";
+                break;
+        }
+
+        return grade;
+    }
+
+    private void getHighestGrade() {
+        int[] grades = {v0, v1, v2, v3, v4, v5, v6, v7, v8, v9,
+                v10, v11, v12, v13, v14, v15, v16};
+
+        int highestGradeIndex = -1;
+
+        for (int i = grades.length - 1; i >= 0; i--) {
+            if (grades[i] > 0) {
+                highestGradeIndex = i;
+                break;
+            }
+        }
+
+        String grade = returnMostClimbedGrade(highestGradeIndex);
+        TextView highestGrade = mView.findViewById(R.id.highest_grade);
+        String newText = "Highest Grade: " + grade;
+        highestGrade.setText(newText);
+
     }
 }
