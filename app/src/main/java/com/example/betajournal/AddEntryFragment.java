@@ -234,8 +234,9 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
         tv.setText(mCurrentGrade);
         mGridLayout.addView(tv);
 
-        addGradeToMap(mCurrentGrade);
-
+        if (currentButton != R.id.no_send_btn) {
+            addGradeToMap(mCurrentGrade);
+        }
         switch (currentButton) {
             case R.id.add_onsight_btn:
                 onsight = onsight + mCurrentGrade + ", ";
@@ -352,6 +353,9 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
         }
     }
 
+    /**
+     * Takes the current grade and increments the value associated with that key
+     */
     public void addGradeToMap(String mCurrentGrade) {
         Integer oldValue = mapOfGrades.get(mCurrentGrade);
         int newValue;

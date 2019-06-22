@@ -195,9 +195,9 @@ public class StatsFragment extends Fragment {
         int[] grades = {v0, v1, v2, v3, v4, v5, v6, v7, v8, v9,
                         v10, v11, v12, v13, v14, v15, v16};
 
-        int max = v0;
-        int maxGradeIndex = 0;
-        for (int i = 1; i < grades.length; i++) {
+        int max = 0;
+        int maxGradeIndex = -1;
+        for (int i = 0; i < grades.length; i++) {
             if (grades[i] > max) {
                 max = grades[i];
                 maxGradeIndex = i;
