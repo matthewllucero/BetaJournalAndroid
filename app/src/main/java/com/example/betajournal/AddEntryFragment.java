@@ -122,7 +122,7 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
             public void onClick(View v) {
 
                 calendar = Calendar.getInstance();
-                int month = calendar.get(Calendar.MONTH) + 1;
+                int month = calendar.get(Calendar.MONTH);
                 int day = calendar.get(Calendar.DAY_OF_MONTH);
                 int year = calendar.get(Calendar.YEAR);
 
@@ -131,7 +131,7 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
                     public void onDateSet(DatePicker view, int mYear, int mMonth, int mDayOfMonth) {
 
                         //Grabs the current date chosen by the user and puts it into a string to be set in the chosenDate TextField
-                        String mDate = mMonth + "/" + mDayOfMonth + "/" + mYear;
+                        String mDate = (mMonth + 1) + "/" + mDayOfMonth + "/" + mYear;
 
                         //Date needed for database
                         date = mDate;
@@ -317,7 +317,8 @@ public class AddEntryFragment extends Fragment implements View.OnClickListener, 
 
 
             /*****************************/
-
+            //Setting the count for the grades that were thrown into Map<String, Integer> mapOfGrades
+            //Grades were added in addGradeToMap()
 
             savedEntries.setV0Count(savedEntries.getV0Count() + mapOfGrades.get("V0"));
             savedEntries.setV1Count(savedEntries.getV1Count() + mapOfGrades.get("V1"));
